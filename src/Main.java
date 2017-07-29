@@ -75,12 +75,12 @@ public class Main {
             }
         }
 
-        System.out.println(student.size());
-        System.out.println(teacher.size());
+        System.out.println("Student size: " + student.size());
+        System.out.println("Teacher size: " + teacher.size());
 
-        System.out.println(englishClass.keySet());
-        System.out.println(englishClass.values());
-        System.out.println(englishClass.toString());
-        System.out.println(englishClass.entrySet());
+        System.out.println("English Class - keyset: " + englishClass.keySet());
+        System.out.println("English Class - values: " + englishClass.values());
+        System.out.println("English Class - toString: " + englishClass.toString());
+        System.out.println("English Class - entrySet: " + englishClass.entrySet());
     }
 }

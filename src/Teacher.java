@@ -5,9 +5,12 @@ public class Teacher {
     int id;
     int grade;
 
-    Teacher(){}
+    Teacher() {
+    }
 
-    public String getFirstName() { return firstName; }
+    public String getFirstName() {
+        return firstName;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
