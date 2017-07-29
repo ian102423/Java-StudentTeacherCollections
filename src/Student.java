@@ -41,6 +41,15 @@ public class Student {
     }
 
     @Override
+    public String toString() {
+        return "\nStudent: " +
+                "\n\tFirstName: " + firstName +
+                "\n\tLastName: " + lastName +
+                "\n\tID: " + id +
+                "\n\tGrade: " + grade;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Student)) return false;

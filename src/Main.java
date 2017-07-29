@@ -28,14 +28,17 @@ public class Main {
 
         }
 
-        Set<Student> studentSet = new HashSet<>();
+        Set<Student> studentSet1 = new HashSet<>();
+        Set<Student> studentSet2 = new HashSet<>();
+        Set<Student> studentSet3 = new HashSet<>();
+
         for (int i = 0; i < firstNameList.length; i++) {
             if (i < 5) {
-                studentSet.add(student.get(i));
+                studentSet1.add(student.get(i));
             } else if (i < 10) {
-                studentSet.add(student.get(i));
+                studentSet2.add(student.get(i));
             } else {
-                studentSet.add(student.get(i));
+                studentSet3.add(student.get(i));
             }
         }
 
@@ -58,20 +61,26 @@ public class Main {
 
         }
 
-        Set<Teacher> teacherSet = new HashSet<>();
+        Map<Teacher, Set> englishClass = new HashMap<>();
+        Map<Teacher, Set> mathClass = new HashMap<>();
+        Map<Teacher, Set> artClass = new HashMap<>();
 
         for (int j = 0; j < 3; j++) {
             if (j == 0) {
-                teacherSet.add(teacher.get(j));
+                englishClass.put(teacher.get(j), studentSet1);
             } else if (j == 1) {
-                teacherSet.add(teacher.get(j));
+                mathClass.put(teacher.get(j), studentSet2);
             } else {
-                teacherSet.add(teacher.get(j));
+                artClass.put(teacher.get(j), studentSet3);
             }
         }
 
         System.out.println(student.size());
         System.out.println(teacher.size());
 
+        System.out.println(englishClass.keySet());
+        System.out.println(englishClass.values());
+        System.out.println(englishClass.toString());
+        System.out.println(englishClass.entrySet());
     }
 }
