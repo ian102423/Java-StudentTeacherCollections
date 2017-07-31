@@ -40,15 +40,13 @@ public class Student {
         this.grade = grade;
     }
 
+//    public static String
+
     @Override
     public String toString() {
-        return "\nStudent: " +
-                "\n\tFirstName: " + firstName +
-                "\n\tLastName: " + lastName +
-                "\n\tID: " + id +
-                "\n\tGrade: " + grade;
-    }
+        return String.format("\n%s:\n\tFirstName:%s\n\tLastName:%s\n\tID:%s\n\tGrade:%s", this.getClass().getName(), firstName, lastName, id, grade);
 
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
