@@ -1,52 +1,52 @@
 public class Student {
 
-    String firstName;
-    String lastName;
-    int id;
-    int grade;
+    String firstNames;
+    String lastNames;
+    int ids;
+    int grades;
 
     Student() {
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstNames() {
+        return firstNames;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstNames(String firstNames) {
+        this.firstNames = firstNames;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastNames() {
+        return lastNames;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastNames(String lastNames) {
+        this.lastNames = lastNames;
     }
 
-    public int getId() {
-        return id;
+    public int getIds() {
+        return ids;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIds(int ids) {
+        this.ids = ids;
     }
 
-    public int getGrade() {
-        return grade;
+    public int getGrades() {
+        return grades;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public void setGrades(int grades) {
+        this.grades = grades;
     }
 
-//    public static String
 
     @Override
     public String toString() {
-        return String.format("\n%s:\n\tFirstName:%s\n\tLastName:%s\n\tID:%s\n\tGrade:%s", this.getClass().getName(), firstName, lastName, id, grade);
+        return String.format("\n%s:\n\tFirstName:%s\n\tLastName:%s\n\tID:%s\n\tGrade:%s", this.getClass().getName(), firstNames, lastNames, ids, grades);
 
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -54,18 +54,18 @@ public class Student {
 
         Student student = (Student) o;
 
-        if (getId() != student.getId()) return false;
-        if (getGrade() != student.getGrade()) return false;
-        if (!getFirstName().equals(student.getFirstName())) return false;
-        return getLastName().equals(student.getLastName());
+        if (getIds() != student.getIds()) return false;
+        if (getGrades() != student.getGrades()) return false;
+        if (!getFirstNames().equals(student.getFirstNames())) return false;
+        return getLastNames().equals(student.getLastNames());
     }
 
     @Override
     public int hashCode() {
-        int result = getFirstName().hashCode();
-        result = 31 * result + getLastName().hashCode();
-        result = 31 * result + getId();
-        result = 31 * result + getGrade();
+        int result = getFirstNames().hashCode();
+        result = 31 * result + getLastNames().hashCode();
+        result = 31 * result + getIds();
+        result = 31 * result + getGrades();
         return result;
     }
 }

@@ -19,10 +19,10 @@ public class Main {
         for (int i = 0; i < firstNameList.length; i++) {
             student = new Student();
 
-            student.setFirstName(firstNameList[i]);
-            student.setLastName(lastNameList[i]);
-            student.setGrade(1);
-            student.setId(i);
+            student.setFirstNames(firstNameList[i]);
+            student.setLastNames(lastNameList[i]);
+            student.setGrades(1);
+            student.setIds(i);
 
             students.add(student);
 
@@ -51,10 +51,10 @@ public class Main {
             int max = 15;
             int result = random.nextInt(max);
 
-            firstGradeTeachers.setFirstName(firstNameList[result]);
-            firstGradeTeachers.setLastName(lastNameList[result]);
-            firstGradeTeachers.setGrade(1);
-            firstGradeTeachers.setId(j);
+            firstGradeTeachers.setFirstNames(firstNameList[result]);
+            firstGradeTeachers.setLastNames(lastNameList[result]);
+            firstGradeTeachers.setGrades(1);
+            firstGradeTeachers.setIds(j);
 
             teachers.add(firstGradeTeachers);
 
@@ -73,12 +73,12 @@ public class Main {
         System.out.println("Student size: " + students.size());
         System.out.println("Teacher size: " + teachers.size());
 
-        System.out.println("English Class - keyset: " + englishClass.keySet());
-        System.out.println("Math Class - keyset: " + mathClass.keySet());
-        System.out.println("Art Class - keyset: " + artClass.keySet());
+        for (Teacher t : teachers) {
+            System.out.println(t);
+        }
 
-        System.out.println("English Class - values: " + englishClass.values());
-        System.out.println("English Class - toString: " + englishClass.toString());
-        System.out.println("English Class - entrySet: " + englishClass.entrySet());
+        for (Student s : students) {
+            System.out.println(s);
+        }
     }
 }
