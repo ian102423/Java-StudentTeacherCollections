@@ -80,5 +80,21 @@ public class Main {
         for (Student s : students) {
             System.out.println(s);
         }
+
+        Map<Teacher, Set> firstGradeClasses = new HashMap<>();
+        for (int i = 0; i < teachers.size(); i++) {
+            if (i == 0) {
+                firstGradeClasses.put(teachers.get(i), studentSet1);
+            } else if (i == 1) {
+                firstGradeClasses.put(teachers.get(i), studentSet2);
+            } else {
+                firstGradeClasses.put(teachers.get(i), studentSet3);
+            }
+        }
+
+        System.out.println("********** KeySet, Values, EntrySet *********\n");
+        System.out.println(firstGradeClasses.keySet());
+        System.out.println(firstGradeClasses.values());
+        System.out.println(firstGradeClasses.entrySet());
     }
 }
