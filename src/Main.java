@@ -93,8 +93,16 @@ public class Main {
         }
 
         System.out.println("********** KeySet, Values, EntrySet *********\n");
-        System.out.println(firstGradeClasses.keySet());
-        System.out.println(firstGradeClasses.values());
-        System.out.println(firstGradeClasses.entrySet());
+
+
+        for(Teacher key : firstGradeClasses.keySet()){
+            System.out.println(key);
+        }
+
+        for(Set value : firstGradeClasses.values()){
+            System.out.println(value);
+        }
+
+//        for(firstGradeClasses.entrySet())    //TODO: work on it.
     }
 }
